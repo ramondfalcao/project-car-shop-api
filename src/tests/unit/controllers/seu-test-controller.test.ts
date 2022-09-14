@@ -14,7 +14,6 @@ describe('Car Controller', () => {
   const carController = new CarController(carService);
 
   const req = {} as Request; 
-  // o mesmo acontece com o segundo parâmetro
   const res = {} as Response;
 
   before(async () => {

@@ -12,6 +12,11 @@ class CarService implements IService<ICar> {
     const parsed = CarZod.parse(obj);
     return this._model.create(parsed);
   }
+
+  public async read():Promise<ICar[]> {
+    const cars = await this._model.read();
+    return cars as ICar[];
+  }
 }
 
 export default CarService;

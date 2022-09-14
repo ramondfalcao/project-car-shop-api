@@ -4,7 +4,7 @@ import { NextFunction, Request, Response } from 'express';
 import CarModel from '../../../models/carModel';
 import CarService from '../../../services/carService';
 import CarController from '../../../controllers/carController';
-import { carMock } from '../../mocks/carMock';
+import { carMock, carMockWithId } from '../../mocks/carMock';
 const { expect } = chai;
 
 
@@ -17,10 +17,7 @@ describe('Car Controller', () => {
   const res = {} as Response;
 
   before(async () => {
-    sinon
-      .stub(carService, 'create')
-      .resolves(carMock);
-
+    sinon.stub(carService, 'create').resolves(carMock);
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns(res);
   });
@@ -38,5 +35,4 @@ describe('Car Controller', () => {
       expect((res.json as sinon.SinonStub).calledWith(carMock)).to.be.true;
     });
   });
-
 });

@@ -54,4 +54,22 @@ describe('Car Service', () => {
       expect(error.message).to.be.deep.equal(ErrorTypes.EntityNotFound);
 		});
 	});
+
+  describe('List Cars', () => {
+		it('Success', async () => {
+			const carCreated = await carService.readOne(carMockWithId._id);
+			expect(carCreated).to.be.deep.equal(carMockWithId);
+		});
+
+		it('Failure', async () => {
+      let error;
+			try {
+				await carService.readOne(carMockWithId._id);
+			} catch (err:any) {
+        error = err
+			}
+      expect(error, 'error should be defined').not.to.be.undefined;
+      expect(error.message).to.be.deep.equal(ErrorTypes.EntityNotFound);
+		});
+	});
 });

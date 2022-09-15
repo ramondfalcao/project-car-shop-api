@@ -31,6 +31,12 @@ class MotorCycleService implements IService<IMotorcycle> {
     if (!motorcycleUpdate) throw new Error(ErrorTypes.EntityNotFound);
     return motorcycleUpdate;
   }
+
+  public async delete(_id:string):Promise<IMotorcycle> {
+    const motorcycleDelete = await this._model.delete(_id);
+    if (!motorcycleDelete) throw new Error(ErrorTypes.EntityNotFound);
+    return motorcycleDelete;
+  }
 }
 
 export default MotorCycleService;

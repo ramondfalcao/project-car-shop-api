@@ -11,6 +11,7 @@ const motorCycleController = new MotorCycleController(motorcycleService);
 
 motorCycleRoute.post('/', (req, res) => motorCycleController.create(req, res));
 motorCycleRoute.put('/:id', (req, res) => motorCycleController.update(req, res));
+motorCycleRoute.delete('/:id', (req, res) => motorCycleController.delete(req, res));
 motorCycleRoute.get('/', (req, res) => motorCycleController.read(req, res));
 motorCycleRoute.get('/:id', (req, res) => motorCycleController.readOne(req, res));
 

@@ -12,6 +12,11 @@ class MotorCycleService implements IService<IMotorcycle> {
     const parsed = MotorcycleZod.parse(obj);
     return this._model.create(parsed);
   }
+
+  public async read():Promise<IMotorcycle[]> {
+    const motorcycles = await this._model.read();
+    return motorcycles as IMotorcycle[];
+  }
 }
 
 export default MotorCycleService;

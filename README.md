@@ -19,7 +19,7 @@ Neste projeto, fui capaz de:
 
 - Desenvolver uma API RESTful utilizando a arquitetura de software MSC(Model-Service-Controller).
 
-- Criar um banco de dados utilizando a ODM Moogoose.
+- Criar um banco de dados utilizando a ODM Mongoose.
 
 - Utilizar a lib ZOD para validação de requisições.
 
@@ -33,6 +33,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Json Web Tokens](https://jwt.io/)
 - [Zod](https://zod.dev/)
 - [MongoDb](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
 - [Mocha]()
 - [Chai]()
 - [Sinon]()

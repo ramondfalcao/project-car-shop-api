@@ -40,6 +40,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [POO]()
 - [SOLID]()
 
+## Aplicação com 100% de Cobertura de Testes
+
+<p>
+  <img src="./coverage.png" width="450" title="hover text">
+</p>
+
+
 ## Instruções para abrir a aplicação
 Para rodar está aplicação é necessário ter Git, Docker, Node e o Docker Compose instalados. Docker Compose na versão 1.29 ou superior e o Node na versão 16.
 

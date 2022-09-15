@@ -19,6 +19,7 @@ export default class CarController {
     res: Response<ICar[]>,
   ) {
     const result = await this._service.read();
+    console.log(result);
     return res.status(200).json(result as ICar[]);
   }
 
